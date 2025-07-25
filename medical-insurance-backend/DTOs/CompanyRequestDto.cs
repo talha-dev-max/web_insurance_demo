@@ -47,10 +47,8 @@ namespace medical_insurance_backend.DTOs
 
         /// <summary>
         /// Company phone number
-        /// Must be exactly 10 digits starting with 05
         /// </summary>
         [Required(ErrorMessage = "Phone number is required")]
-        [RegularExpression(@"^05\d{8}$", ErrorMessage = "Phone number must be 10 digits starting with 05")]
         public string PhoneNumber { get; set; } = string.Empty;
 
         /// <summary>

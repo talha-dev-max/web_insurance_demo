@@ -45,7 +45,6 @@ namespace medical_insurance_backend.Models
         /// </summary>
         [Required]
         [StringLength(10, MinimumLength = 10)]
-        [Phone]
         public string PhoneNumber { get; set; } = string.Empty;
 
         /// <summary>

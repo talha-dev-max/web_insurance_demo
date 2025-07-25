@@ -195,10 +195,10 @@ export class CompanyDetailsComponent implements OnInit {
     }
 
     // Validate Phone Number
-    if (!this.companyService.isValidPhoneNumber(this.companyData.phoneNumber)) {
-      this.showErrorMessage('رقم الجوال يجب أن يبدأ بـ 05 ويكون 10 أرقام');
-      return false;
-    }
+    // if (!this.companyService.isValidPhoneNumber(this.companyData.phoneNumber)) {
+    //   this.showErrorMessage('رقم الجوال يجب أن يبدأ بـ 05 ويكون 10 أرقام');
+    //   return false;
+    // }
 
     // Validate License Start Date
     if (!this.companyData.licenseStartDate) {
