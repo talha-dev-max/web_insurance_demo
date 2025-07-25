@@ -1,0 +1,85 @@
+
+Warning: This is a simple server for use in testing or debugging Angular applications
+locally. It hasn't been reviewed for security issues.
+
+Binding this server to an open connection can result in compromising your application or
+computer. Using a different host than the one passed to the "--host" flag might result in
+websocket connection issues. You might need to use "--disable-host-check" if that's the
+case.
+    
+Component HMR has been enabled, see https://angular.dev/hmr for more info.
+❯ Building...
+✔ Building...
+Browser bundles     
+Initial chunk files  | Names                     |  Raw size
+polyfills.js         | polyfills                 |  91.33 kB | 
+main.js              | main                      |  20.45 kB | 
+chunk-GSPUIBGI.js    | -                         |  14.82 kB | 
+styles.css           | styles                    |   8.71 kB | 
+
+                     | Initial total             | 135.31 kB
+
+Lazy chunk files     | Names                     |  Raw size
+chunk-6JDOC3TJ.js    | company-details-component |  36.72 kB | 
+chunk-TKRPIM44.js    | home-component            |  20.70 kB | 
+chunk-TUY3XUFY.js    | -                         |   4.59 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names                     |  Raw size
+polyfills.server.mjs | polyfills.server          | 568.67 kB | 
+main.server.mjs      | main.server               |  21.77 kB | 
+chunk-3RYOPEOE.mjs   | -                         |  14.86 kB | 
+server.mjs           | server                    |   1.86 kB | 
+
+Lazy chunk files     | Names                     |  Raw size
+chunk-3XJJZFIL.mjs   | company-details-component |  36.76 kB | 
+chunk-YWZOBE2F.mjs   | home-component            |  20.74 kB | 
+chunk-HFMV4U57.mjs   | -                         |   4.62 kB | 
+
+Application bundle generation complete. [4.846 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/
+  ➜  Network: http://192.168.43.165:4200/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names          | Raw size
+main.js             | main           | 20.45 kB | 
+
+Lazy chunk files    | Names          | Raw size
+chunk-GTGYCOD5.js   | home-component | 20.42 kB | 
+
+
+Server bundles     
+Initial chunk files | Names          | Raw size
+main.server.mjs     | main.server    | 21.77 kB | 
+
+Lazy chunk files    | Names          | Raw size
+chunk-EIQFZ5JS.mjs  | home-component | 20.46 kB | 
+
+Application bundle generation complete. [1.427 seconds]
+
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names          | Raw size
+main.js             | main           | 20.45 kB | 
+
+Lazy chunk files    | Names          | Raw size
+chunk-IP2IHGSP.js   | home-component | 20.25 kB | 
+
+
+Server bundles     
+Initial chunk files | Names          | Raw size
+main.server.mjs     | main.server    | 21.77 kB | 
+
+Lazy chunk files    | Names          | Raw size
+chunk-N6U7XEBB.mjs  | home-component | 20.29 kB | 
+
+Application bundle generation complete. [0.798 seconds]
+
+Component update sent to client(s).

@@ -1,0 +1,311 @@
+// Import global font
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+.container6 {
+  width: 100%;
+  height: 100%;
+  padding: 20px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: "Tajawal", sans-serif;
+  direction: rtl;
+}
+
+.de1 {
+  width: 300px;
+  height: auto;
+  max-width: 90%;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.details-form {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+  text-align: right;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+  text-align: right;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: "Tajawal", sans-serif;
+  text-align: right;
+  direction: rtl;
+}
+
+input:disabled {
+  background-color: #f5f5f5;
+  color: #777;
+  cursor: not-allowed;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4B92BA;
+  box-shadow: 0 0 0 2px rgba(75, 146, 186, 0.2);
+}
+
+select {
+  cursor: pointer;
+}
+
+select:disabled {
+  background-color: #f5f5f5;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.next-button {
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    #4B92BA 0%,
+    #AEB5B7 100%
+  );
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: center;
+  font-family: "Tajawal", sans-serif;
+  min-width: 100px;
+}
+
+.next-button:hover:not(:disabled) {
+  background: linear-gradient(
+    290deg,
+    #4B92BA 0%,
+    #AEB5B7 100%
+  );
+  color: #000000;
+  transform: translateY(-1px);
+}
+
+.back-button {
+  background-color: #ccc;
+  color: black;
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.back-button:hover:not(:disabled) {
+  background-color: #bbb;
+  transform: translateY(-1px);
+}
+
+.message {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.message.success {
+  color: #4caf50;
+  background-color: #e8f5e8;
+  border: 1px solid #4caf50;
+}
+
+.message.error {
+  color: #f44336;
+  background-color: #ffeaea;
+  border: 1px solid #f44336;
+}
+
+// Responsive design
+@media (max-width: 1200px) {
+  .details-form {
+    grid-template-columns: 45% 45%;
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+  }
+  
+  .de1 {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 500px;
+  }
+  
+  .container6 {
+    padding: 15px 3%;
+  }
+  
+  .de1 {
+    width: 200px;
+    margin-bottom: 25px;
+  }
+  
+  .form-buttons {
+    grid-column: 1;
+    margin-top: 15px;
+  }
+  
+  input, select {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 14px;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container6 {
+    padding: 10px 2%;
+  }
+  
+  .de1 {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .details-form {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  input, select {
+    font-size: 13px;
+    padding: 10px;
+  }
+  
+  button {
+    font-size: 13px;
+    padding: 10px 20px;
+    min-width: 100px;
+  }
+  
+  label {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .message {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .de1 {
+    width: 120px;
+  }
+  
+  .details-form {
+    padding: 10px;
+    gap: 12px;
+  }
+  
+  input, select, button {
+    font-size: 12px;
+    padding: 10px;
+    min-height: 44px; // Touch-friendly minimum height
+  }
+  
+  label {
+    font-size: 12px;
+  }
+}
+
+// RTL support enhancements
+[dir="rtl"] {
+  .details-form {
+    text-align: right;
+  }
+  
+  input, select {
+    text-align: right;
+  }
+  
+  label {
+    text-align: right;
+  }
+}
+
+// Loading state
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+// Form validation styles
+input.ng-invalid.ng-touched {
+  border-color: #f44336;
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.2);
+}
+
+input.ng-valid.ng-touched {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}

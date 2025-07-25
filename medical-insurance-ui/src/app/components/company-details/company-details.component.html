@@ -1,0 +1,132 @@
+<!-- Company Details Header Image -->
+<div class="container6">
+  <img src="assets/img/download (1).png" class="de1" alt="Company Details Header"/>
+  
+  <form class="details-form" (ngSubmit)="onSubmit($event)">
+    
+    <!-- CR Number -->
+    <div class="form-group">
+      <label for="crNumber">{{ 'company.details.cr_number' | translate }}</label>
+      <input 
+        type="tel" 
+        id="crNumber"
+        [(ngModel)]="companyData.crNumber"
+        (input)="onCrNumberChange()"
+        maxlength="10" 
+        [placeholder]="'placeholder.cr_number' | translate"
+        [disabled]="isExisting || isLoading"
+        name="crNumber">
+    </div>
+
+    <!-- Company Name English -->
+    <div class="form-group">
+      <label for="companyNameEn">{{ 'company.details.company_name_en' | translate }}</label>
+      <input 
+        type="text" 
+        id="companyNameEn"
+        [(ngModel)]="companyData.companyNameEn"
+        (input)="onCompanyNameEnChange()"
+        [placeholder]="'placeholder.company_name_en' | translate"
+        [disabled]="isLoading"
+        name="companyNameEn">
+    </div>
+
+    <!-- Company Name Arabic -->
+    <div class="form-group">
+      <label for="companyNameAr">{{ 'company.details.company_name_ar' | translate }}</label>
+      <input 
+        type="text" 
+        id="companyNameAr"
+        [(ngModel)]="companyData.companyNameAr"
+        (input)="onCompanyNameArChange()"
+        [placeholder]="'placeholder.company_name_ar' | translate"
+        [disabled]="isLoading"
+        name="companyNameAr">
+    </div>
+
+    <!-- License Start Date -->
+    <div class="form-group">
+      <label for="licenseStartDate">{{ 'company.details.license_date' | translate }}</label>
+      <input 
+        type="date" 
+        id="licenseStartDate"
+        [(ngModel)]="companyData.licenseStartDate"
+        [disabled]="isLoading"
+        name="licenseStartDate">
+    </div>
+
+    <!-- Phone Number -->
+    <div class="form-group">
+      <label for="phoneNumber">{{ 'company.details.phone' | translate }}</label>
+      <input 
+        type="tel" 
+        id="phoneNumber"
+        [(ngModel)]="companyData.phoneNumber"
+        (input)="onPhoneNumberChange()"
+        maxlength="10" 
+        [placeholder]="'placeholder.phone' | translate"
+        [disabled]="isLoading"
+        name="phoneNumber">
+    </div>
+
+    <!-- Classification -->
+    <div class="form-group">
+      <label for="classification">{{ 'company.details.classification' | translate }}</label>
+      <select 
+        id="classification"
+        [(ngModel)]="companyData.classification"
+        [disabled]="isLoading"
+        name="classification">
+        <option 
+          *ngFor="let option of classificationOptions" 
+          [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Buttons Row 1: Back Button -->
+    <div class="form-buttons">
+      <button 
+        type="button" 
+        class="back-button"
+        (click)="goBack()"
+        [disabled]="isLoading">
+        {{ 'company.details.back' | translate }}
+      </button>
+    </div>
+
+
+    <!-- Buttons Row 2: Empty for spacing -->
+    <div class="form-buttons">
+      <!-- Empty for grid spacing -->
+    </div>
+
+    <!-- Buttons Row 3: Submit Button -->
+    <div class="form-buttons">
+      <button 
+        type="submit" 
+        class="next-button"
+        [disabled]="isLoading">
+        <span *ngIf="!isLoading">
+          {{ 'company.details.save' | translate }}
+        </span>
+        <span *ngIf="isLoading">
+          {{ 'company.details.saving' | translate }}
+        </span>
+      </button>
+    </div>
+
+  </form>
+
+  <!-- Message Display -->
+  <div 
+    class="message" 
+    [class.error]="messageType === 'error'"
+    [class.success]="messageType === 'success'"
+    *ngIf="message"
+    style="grid-column: span 3; text-align: center; margin-top: 20px;">
+    {{ message }}
+  </div>
+
+</div>

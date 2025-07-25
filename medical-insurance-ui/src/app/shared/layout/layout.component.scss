@@ -1,0 +1,75 @@
+.language-toggle {
+  background: linear-gradient(135deg, #4B92BA 0%, #357ABD 100%);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(75, 146, 186, 0.3);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #357ABD 0%, #2A6BB8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(75, 146, 186, 0.4);
+    
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(75, 146, 186, 0.3);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 146, 186, 0.3);
+  }
+
+  // Icon for language switching
+  &::after {
+    content: '🌐';
+    margin-left: 8px;
+    font-size: 16px;
+  }
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+// Language-specific styles
+:host.lang-en {
+  .language-toggle {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
+:host.lang-ar {
+  .language-toggle {
+    margin-left: 15px;
+    margin-right: 0;
+  }
+}

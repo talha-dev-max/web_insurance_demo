@@ -1,0 +1,57 @@
+.create-btn {
+  width: 200px;
+  padding: 10px;
+  margin: 15px auto;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    #4B92BA 0%,
+    #AEB5B7 100%
+  );
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Tajawal", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.create-btn:hover {
+  background: linear-gradient(
+    290deg,
+    #4B92BA 0%,
+    #AEB5B7 100%
+  );
+  color: #000000;
+  transform: translateY(-1px);
+}
+
+// Mobile responsiveness for create button
+@media (max-width: 768px) {
+  .create-btn {
+    width: 180px;
+    padding: 8px;
+    font-size: 13px;
+    margin: 12px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-btn {
+    width: 150px;
+    padding: 6px;
+    font-size: 12px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .create-btn {
+    width: 120px;
+    padding: 5px;
+    font-size: 11px;
+    margin: 8px auto;
+  }
+}

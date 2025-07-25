@@ -1,0 +1,86 @@
+<!-- Logo Section -->
+<div class="logo-section">
+  <img src="assets/img/download (1).png" alt="Shahin Logo11" class="logo" />
+</div>
+
+<!-- Main Content -->
+<div class="content">
+  <!-- Form -->
+  <form class="search-form" (ngSubmit)="onSubmit($event)">
+    <input 
+      type="tel" 
+      id="crNumberInput"
+      name="crNumber"
+      [(ngModel)]="crNumber"
+      (input)="onCrNumberChange()"
+      maxlength="10" 
+      [placeholder]="'home.search.placeholder' | translate"
+      [disabled]="isLoading">
+    
+    <div class="checkbox-wrapper">
+      <input 
+        type="checkbox" 
+        id="agreementCheckbox"
+        name="agreed"
+        [(ngModel)]="agreed"
+        [disabled]="isLoading" />
+      <label for="agreementCheckbox">{{ 'home.search.agreement' | translate }}</label>
+    </div>
+    
+    <button 
+      type="submit" 
+      class="search-btn"
+      [disabled]="isLoading">
+      <span *ngIf="!isLoading">{{ 'home.search.button' | translate }}</span>
+      <span *ngIf="isLoading">{{ 'home.search.searching' | translate }}</span>
+    </button>
+  </form>
+  
+  <p 
+    class="message" 
+    [class.error]="messageType === 'error'"
+    [class.success]="messageType === 'success'"
+    *ngIf="message">
+    {{ message }}
+  </p>
+  
+  <button 
+    *ngIf="showCreateButton"
+    class="create-btn"
+    (click)="createNewCompany()"
+    type="button">
+    {{ 'home.create_new_company' | translate }}
+  </button>
+</div>
+
+<!-- Features Section -->
+<div class="frame">
+  <div class="text-wrapper">{{ 'home.features.compare' | translate }}</div>
+  <img class="group" src="assets/img/download (2).png" alt="Compare" />
+  <div class="text-wrapper">{{ 'home.features.secure' | translate }}</div>
+  <img class="group" src="assets/img/download (3).png" alt="Secure" />
+  <div class="text-wrapper">{{ 'home.features.print' | translate }}</div>
+</div>
+
+<!-- Logo Slider Section -->
+<div class="content2">
+  
+  <div class="logo-slider">
+    <!-- Scrolling Right Images -->
+    <div class="logo-moving">
+      <div class="logo-track">
+        <!-- Logos (duplicated for smooth scrolling) -->
+        <div class="logo-item"><img src="assets/img/download.jpeg" alt="Malath Logo"></div> 
+        <div class="logo-item"><img src="assets/img/download (1).png" alt="UCA Logo"></div>
+        <div class="logo-item"><img src="assets/img/download (2).png" alt="IA Logo"></div>
+        <div class="logo-item"><img src="assets/img/download (3).png" alt="Malath Logo"></div> 
+        <div class="logo-item"><img src="assets/img/download (4).png" alt="UCA Logo"></div>
+        <div class="logo-item"><img src="assets/img/download.jpeg" alt="IA Logo"></div>
+        <div class="logo-item"><img src="assets/img/download (1).png" alt="Malath Logo"></div> 
+        <div class="logo-item"><img src="assets/img/download (2).png" alt="UCA Logo"></div>
+        <div class="logo-item"><img src="assets/img/download (3).png" alt="Malath Logo"></div> 
+        <div class="logo-item"><img src="assets/img/download (4).png" alt="ACIG Logo"></div>
+      </div>
+    </div>
+  </div>
+</div>

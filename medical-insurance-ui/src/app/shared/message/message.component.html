@@ -1,0 +1,9 @@
+<div 
+  class="message" 
+  [class.success]="type === 'success'"
+  [class.error]="type === 'error'"
+  [class.info]="type === 'info'"
+  [class.warning]="type === 'warning'"
+  *ngIf="show && message">
+  {{ message }}
+</div>

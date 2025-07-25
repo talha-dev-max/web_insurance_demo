@@ -1,0 +1,574 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Import Arabic font - Tajawal
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+
+// Global styles adapted from the original design
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  direction: rtl;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+// Header styles
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.left-section {
+  display: inline-block;
+  padding: 10px 90px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #4B92BA 0%,
+    #AEB5B7 100%
+  );
+  color: #000000;
+  font-family: "Tajawal";
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.right-section {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 90px;
+  border-radius: 2px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #4B92BA 0%,
+    #AEB5B7 100%
+  );
+  color: #fff;
+  font-family: "Tajawal", sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+// Logo section
+.logo-section {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+}
+
+// Main content
+.content {
+  margin: 40px auto;
+  padding: 20px;
+  width: 60%;
+  background-color: #d9d9d94f;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Form styles
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: right;
+
+  input[type="tel"], input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: right;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  input:disabled {
+    background-color: #f5f5f5;
+    color: #777;
+  }
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+  justify-content: right;
+  font-family: "Tajawal";
+  font-weight: bold;
+
+  label {
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+  }
+}
+
+// Button styles
+.search-btn, .next-button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    #4B92BA 0%,
+    #AEB5B7 100%
+  );
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: center;
+  font-family: "Tajawal";
+
+  &:hover {
+    background: linear-gradient(
+      290deg,
+      #4B92BA 0%,
+      #AEB5B7 100%
+    );
+    color: #000000;
+  }
+}
+
+.back-button {
+  background-color: #ccc;
+  color: black;
+  font-family: "Tajawal";
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// Company details form
+.details-form {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    font-family: "Tajawal";
+    font-weight: bold;
+    text-align: right;
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+  }
+
+  .form-buttons {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+// Message styles
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: right;
+  
+  &.error {
+    color: red;
+  }
+  
+  &.success {
+    color: green;
+  }
+}
+
+// Footer styles
+.footer {
+  background-color: #f8f8f8;
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-left {
+    flex: 1;
+    font-family: "Tajawal";
+    font-weight: bold;
+    text-align: left;
+    align-items: left;
+
+    p {
+      font-size: 10px;
+      font-weight: bold;
+      color: rgb(95, 90, 90);
+      margin: 0;
+      font-family: "Tajawal";
+    }
+
+    .footer-logo {
+      max-width: 80px;
+      height: auto;
+      justify-content: left;
+    }
+  }
+
+  .footer-center {
+    flex: 2;
+    text-align: center;
+
+    .footer-links {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: inline-flex;
+      gap: 30px;
+
+      a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Tajawal";
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: right;
+    gap: 10px;
+    font-family: "Tajawal";
+    text-align: right;
+
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      margin: 0;
+      font-family: "Tajawal";
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+  }
+}
+
+// Logo slider animation
+.logo-slider {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo-moving {
+  flex: 15;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(80px * 4 + 10px * 6);
+  animation: scroll 19s linear infinite;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  width: 80px;
+  margin: 0 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Frame and group images
+.frame {
+  .group {
+    width: 60px;
+    height: auto;
+  }
+}
+
+// Social media icons
+.social-icons {
+  .social-icon {
+    svg {
+      width: 25px;
+      height: 25px;
+      transition: transform 0.2s ease;
+    }
+    
+    &:hover svg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .content {
+    width: 75%;
+    padding: 18px;
+  }
+  
+  .header {
+    padding: 8px 15px;
+  }
+  
+  .left-section, .right-section {
+    padding: 8px 40px;
+    font-size: 13px;
+  }
+  
+  .footer-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+  
+  .details-form {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .left-section, .right-section {
+    padding: 8px 20px;
+    left: 0;
+    position: static;
+    width: auto;
+    font-size: 12px;
+  }
+  
+  .logo-section .logo {
+    width: 100px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .footer-center .footer-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    
+    a {
+      font-size: 14px;
+    }
+  }
+  
+  .search-btn, .next-button {
+    width: auto;
+    min-width: 80px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .frame {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    
+    .text-wrapper {
+      font-size: 20px;
+    }
+    
+    .group {
+      width: 50px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    width: 95%;
+    padding: 12px;
+    margin: 15px auto;
+  }
+  
+  .header {
+    padding: 8px;
+  }
+  
+  .left-section, .right-section {
+    padding: 6px 15px;
+    font-size: 11px;
+  }
+  
+  .logo-section .logo {
+    width: 80px;
+  }
+  
+  .search-form {
+    gap: 12px;
+    
+    input[type="tel"], input[type="text"], input[type="date"], select {
+      padding: 8px;
+      font-size: 13px;
+    }
+  }
+  
+  .checkbox-wrapper {
+    gap: 8px;
+    
+    label {
+      font-size: 12px;
+    }
+  }
+  
+  .search-btn, .next-button {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 70px;
+  }
+  
+  .footer-left .footer-logo {
+    max-width: 60px;
+  }
+  
+  .footer-center .footer-links a {
+    font-size: 12px;
+  }
+  
+  .footer-right p {
+    font-size: 14px;
+  }
+  
+  .frame .text-wrapper {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  
+  .logo-item {
+    width: 60px;
+  }
+}
+
+@media (max-width: 320px) {
+  .content {
+    width: 98%;
+    padding: 10px;
+  }
+  
+  .left-section, .right-section {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  
+  .logo-section .logo {
+    width: 60px;
+  }
+  
+  .search-form input[type="tel"], 
+  .search-form input[type="text"], 
+  .search-form input[type="date"], 
+  .search-form select {
+    padding: 10px;
+    font-size: 12px;
+    min-height: 44px; // Touch-friendly minimum height
+  }
+  
+  .search-btn, .next-button {
+    padding: 8px 12px;
+    font-size: 11px;
+    min-width: 80px;
+    min-height: 44px; // Touch-friendly minimum height
+  }
+  
+  .frame .text-wrapper {
+    font-size: 14px;
+  }
+  
+  .footer-center .footer-links {
+    gap: 10px;
+    
+    a {
+      font-size: 11px;
+    }
+  }
+}
